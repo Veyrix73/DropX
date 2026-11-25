@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'screens/activity_screen.dart';
-import 'screens/home_screen.dart';
-import 'screens/settings_screen.dart';
-import 'settings/app_settings.dart';
-import 'theme/dropx_theme.dart';
+import 'src/screens/activity_screen.dart';
+import 'src/screens/home_screen.dart';
+import 'src/screens/settings_screen.dart';
+import 'src/settings/app_settings.dart';
+import 'src/theme/dropx_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
