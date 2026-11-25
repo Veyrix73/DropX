@@ -324,13 +324,33 @@ class _HeroPanel extends StatelessWidget {
     final theme = Theme.of(context);
     final accent = theme.colorScheme.primary;
     final dark = theme.brightness == Brightness.dark;
-    return Container(
+    final showGlow =
+        settings.backgroundEffects && settings.motion != MotionPreference.off;
+    final transitionDuration = switch (settings.motion) {
+      MotionPreference.full => const Duration(milliseconds: 380),
+      MotionPreference.reduced => const Duration(milliseconds: 140),
+      MotionPreference.off => Duration.zero,
+    };
+    return AnimatedContainer(
+      duration: transitionDuration,
       width: double.infinity,
       padding: const EdgeInsets.all(26),
       decoration: BoxDecoration(
         color: dark ? const Color(0xFF20271B) : const Color(0xFFE9F0DC),
         borderRadius: BorderRadius.circular(27),
         border: Border.all(color: accent.withOpacity(0.18)),
+        boxShadow: showGlow
+            ? [
+                BoxShadow(
+                  color: accent.withOpacity(
+                    settings.motion == MotionPreference.full ? 0.16 : 0.08,
+                  ),
+                  blurRadius:
+                      settings.motion == MotionPreference.full ? 32 : 14,
+                  spreadRadius: 1,
+                ),
+              ]
+            : const [],
       ),
       child: Row(
         children: [
