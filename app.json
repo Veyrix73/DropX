@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "DropX",
+    "slug": "dropx",
+    "version": "0.2.0",
+    "orientation": "portrait",
+    "scheme": "dropx",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.veyrix.dropx"
+    },
+    "android": {
+      "package": "com.veyrix.dropx"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "newArchEnabled": true
+  }
+}

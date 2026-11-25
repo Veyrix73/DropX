@@ -1,25 +1,25 @@
-# Flutter / Dart
-.dart_tool/
-.packages
-.pub/
-.pub-cache/
-build/
-.flutter-plugins
-.flutter-plugins-dependencies
+# Dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# Native build output
+/android
+/ios
+
+# Local environment
+.env
+.env.*
+!.env.example
 
 # Editors
 .idea/
 .vscode/
 *.iml
 
-# Native build output and signing files
-android/.gradle/
-ios/Pods/
-ios/.symlinks/
-windows/flutter/ephemeral/
-.env
-.env.*
-!.env.example
-*.jks
-*.keystore
-key.properties
+# OS files
+.DS_Store
+Thumbs.db
